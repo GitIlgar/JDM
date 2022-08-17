@@ -1,0 +1,25 @@
+<router-outlet></router-outlet>
+<div class="catalog__wrapper">
+    <app-burger></app-burger>
+    <div class="header__container">
+        <app-logo></app-logo>
+        <app-profile-icon *ngIf="token; else account"></app-profile-icon>
+        <ng-template #account>
+            <app-btn-login></app-btn-login>
+        </ng-template>  
+    </div>
+    <div class="container">
+        <app-title-button></app-title-button>
+        <app-search-bar></app-search-bar>
+        <div class="container__content">
+            <div class="content__cards">
+                <div *ngFor="let cardItem of cards">
+                    <app-card [card]="cardItem"></app-card>
+                </div> 
+            </div>
+            <div class="content__filter">
+                <div>Цена</div>
+            </div>
+        </div>
+    </div>
+</div>

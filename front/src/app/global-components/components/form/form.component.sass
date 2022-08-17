@@ -1,0 +1,61 @@
+@import "../../../../styles"
+.container
+    width: 100%
+    position: absolute
+    top: 10%
+    // margin-top: calc(  -  )
+    .form__container
+        width: 500px
+        margin: auto
+        .title
+            @include title()
+        .form__inputs
+            display: flex
+            flex-wrap: wrap
+            gap: 59px
+            margin: 36px 0px 67px
+            .input_block
+                width: 100%
+                .input       
+                    height: 60px
+                    width: 100%
+                    @include box_shadow()
+                    border-radius: 10px
+                    padding-left: 20px
+                    font-size: 25px
+                    &::placeholder
+                        color: rgba(0, 0, 0, 0.3)
+                .error
+                    margin: 10px 0px 0px
+                    text-align: center
+                    color: rgba(80, 37, 37, 0.534)
+        .form__send_data
+            width: 100%
+            display: flex
+            justify-content: center
+            margin-bottom: 80px
+            .send_data
+                @include box_shadow()
+                border-radius: 10px
+                font-size: 20px
+                width: 250px
+                height: 45px
+                cursor: pointer
+                
+        .form__question
+            display: flex
+            justify-content: center
+            gap: 26px
+            flex-wrap: wrap
+            .question__title
+                font-size: 20px
+                width: 100%
+                text-align: center
+            .question__button
+                color: #584dff
+                width: 361px
+                font-size: 18px
+                text-align: center
+                cursor: pointer
+
+        

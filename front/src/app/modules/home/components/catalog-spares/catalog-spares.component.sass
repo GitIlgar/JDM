@@ -1,0 +1,33 @@
+@import "../../../../../styles"
+.container
+    min-width: 100%
+    // height: 544px
+    background-color: #ffffff
+    border-radius: 46px
+    @include catalog_padding
+    box-sizing: border-box
+    position: relative
+    box-shadow: -5px 6px 10px rgba(18, 26, 98, 0.15)
+    .container__title
+        @include title
+    .container__spares
+        margin-top: 67px
+        width: 722px
+        height: 196px
+        display: flex
+        justify-content: flex-start
+        gap: 32px
+        flex-wrap: wrap
+        .spires__spire
+            flex-basis: 30%
+            font-size: 17px
+    .container__button
+        padding: 43px 0px 0px
+        display: flex
+        justify-content: flex-end
+        .button
+            @include catalog_button
+    .engine__svg
+        position: absolute
+        top: 0
+        right: 0

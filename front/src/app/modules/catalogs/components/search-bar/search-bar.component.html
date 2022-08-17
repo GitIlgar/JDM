@@ -1,0 +1,15 @@
+<div class="search__container">
+    <div class="search__title">Настройки поиска</div>
+    <div class="input__container">
+        <input type="text" class="search__input">
+        <div class="view__container">
+            <div (click)="view()" [ngStyle]="{'background': viewActiveLeft ? '#FFFFFF': '#D9D9D9'}" class="view">
+                <div [ngStyle]="{'background': viewActiveLeft ? '#D9D9D9' : '#FFFFFF'}" *ngFor="let item of itemsLeft" class="view__square"></div>
+            </div>
+            <div (click)="view()" [ngStyle]="{'background': viewActiveRight ? '#FFFFFF': '#D9D9D9'}" class="view">
+                <div [ngStyle]="{'background': viewActiveRight ? '#D9D9D9' : '#FFFFFF'}" *ngFor="let item of itemsRight" class="view__rectangle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+</div>

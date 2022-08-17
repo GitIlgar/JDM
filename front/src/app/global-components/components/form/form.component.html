@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="form__container">
+        <div class="title">
+            {{ data.title }}
+        </div>
+        <div class="form__inputs">
+            <div class="input_block">
+                <input formControlName="email" type="email" type="text"  placeholder="Почта" class="input">
+                <div *ngIf="this.loginForm.get('email')?.invalid && this.loginForm.get('email')?.touched" class="error">Неверный email</div>
+            </div> 
+            <div class="input_block">
+                <input formControlName="password" type="password" type="text"  placeholder="Пароль" class="input">
+                <div *ngIf="this.loginForm.get('password')?.invalid && this.loginForm.get('password')?.touched" class="error">Неверный пароль</div>    
+            </div>
+
+        </div>
+        <div class="form__send_data">
+            <button (keypress)="submitLogin()" class="send_data">
+                {{ data.buttonSendData }}
+            </button>
+        </div>
+        <div class="form__question">
+            <div class="question__title">
+                {{ data.questionTitle }}
+            </div>
+            <div class="question__button">
+                <a [routerLink]="data.componentLink"> {{data.questionLink}} </a>
+            </div>
+        </div>
+    </form>
+</div>

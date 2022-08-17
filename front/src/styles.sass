@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face
+  font-family: GeometriaMedium
+  src: url(./fonts/Geometria-Medium.ttf)
+@font-face 
+  font-family: GeometriaRegular
+  src: url(./fonts/Geometria-Regular.ttf)
+
+@mixin title() 
+  font-size: 30px
+  line-height: 50px
+  font-family: GeometriaMedium
+@mixin catalog_button() 
+  border-radius: 12px
+  width: 210px
+  height: 55px
+  font-size: 17px
+  text-align: center
+  background-color: #fff
+  border: 0px
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.15)
+  cursor: pointer
+@mixin catalog_padding()
+  padding: 50px 35px 30px
+@mixin box_shadow()
+  filter: drop-shadow(-5px 4px 10px rgba(0, 0, 0, 0.25))
+  outline: none
+  border: 0px
+  background-color: #fff
+
+
+
+$box-shadow: -5px 6px 10px rgba(18, 26, 98, 0.15)
+
+  
+
+
+html body
+  margin: 0
+  font-family: GeometriaRegular

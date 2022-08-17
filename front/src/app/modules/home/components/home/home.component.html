@@ -1,0 +1,20 @@
+<router-outlet></router-outlet>
+<div class="wrapper">
+    <app-burger></app-burger>
+    <div class="container">
+        <app-logo></app-logo>
+        <app-profile-icon *ngIf="token; else account"></app-profile-icon>
+        <ng-template #account>
+            <app-btn-login></app-btn-login>
+        </ng-template>
+    </div>
+    <div class="container__body">
+        <app-search (onEnter)="parrent($event)"></app-search>
+        <app-catalog-spares></app-catalog-spares>
+        <div class="body__catalogs">
+            <app-catalog-expense></app-catalog-expense>
+            <app-catalog-accessory></app-catalog-accessory>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
